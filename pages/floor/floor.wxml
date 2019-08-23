@@ -16,10 +16,10 @@
   </view>
   <view class="lists">
     <view class="floor">3 floor</view>
-    <view class="item"><image src="../../images/mat-c.png"></image></view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
+    <view class="item"><image src="../../images/du-c.png"></image></view>
+    <view class="item"><image src="../../images/du-o.png"></image></view>
+    <view class="item"><image src="../../images/du-o.png"></image></view>
+    <view class="item"><image src="../../images/du-o.png"></image></view>
   </view>
 
 </view>
