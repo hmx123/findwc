@@ -1,0 +1,64 @@
+/**index.wxss**/
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  background-color: #55AAAD;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.header{
+  margin: 20rpx 0;
+  font-size: 40rpx;
+  color: #eee;
+  letter-spacing:8rpx;
+}
+.gender{
+  flex: 2;
+  display: flex;
+}
+.gender image{
+  margin: 100rpx 50rpx 10rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border: 1rpx solid #eee;
+  border-radius: 50%;
+}
+.gender .sextext{
+  text-align: center;
+}
+.container button{
+  margin-bottom: 300rpx;
+}
+.gender view{
+  position:relative;
+}
+.gender view icon{
+  position:absolute;
+  top: 250rpx;
+  left: 180rpx;
+}
+.gender view .select{
+  display:none;
+}
+.gender view .selected{
+  display:block;
+}
+.button{
+  width: 300rpx;
+  border-radius: 150rpx;
+  color: #ffffff;
+  font-size: 32rpx;
+  background: #FF9676;
+  padding: 12rpx 30rpx 12rpx 30rpx;
+  text-decoration: none;
+  letter-spacing:8rpx;
+}
+navigator{
+  border-radius: 150rpx;
+}

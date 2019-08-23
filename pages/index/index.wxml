@@ -1,0 +1,21 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="header">请选择性别</view>
+  <view class="gender">
+    <view>
+      <image src="../../images/nan.png" bindtap="SelectHandle" data-index="boy"/>
+      <icon type="success" class="{{boyselected ? 'selected': 'select'}}"></icon>
+      <view class="sextext">男</view>
+    </view>
+    <view>
+      <image src="../../images/nv.png" bindtap="SelectHandle"  data-index="girl"/>
+      <icon type="success" class="{{girlselected ? 'selected': 'select'}}"></icon>
+      <view class="sextext">女</view>
+    </view>
+  </view>
+  <view>
+    <navigator url="../floor/floor">
+      <button class="button" >确定</button>
+    </navigator>
+  </view>
+</view>

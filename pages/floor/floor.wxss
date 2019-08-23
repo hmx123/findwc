@@ -1,0 +1,22 @@
+page{
+  width: 100%;
+  height: 100%;
+}
+.container{
+  background-color: #55AAAD;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+.lists{
+  display: flex;
+}
+.lists>view{
+  flex: 1;
+}
+.lists .item image{
+  width: 150rpx;
+  height: 150rpx;
+}

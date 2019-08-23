@@ -1,0 +1,13 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/floor/floor"
+  ],
+  "window": {
+    "backgroundColor": "#55AAAD",
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#55AAAD",
+    "navigationBarTitleText": "找位",
+    "navigationBarTextStyle": "white"
+  }
+}
