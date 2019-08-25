@@ -1,21 +1,21 @@
 <!--pages/floor/floor.wxml-->
 <view class="container">
   <view class="lists">
-    <view class="floor">1 floor</view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
+    <view class="floor checked">01楼</view>
+    <view class="item"><image src="../../images/mat-o.png" /></view>
+    <view class="item"><image src="../../images/mat-o.png" /></view>
+    <view class="item"><image src="../../images/mat-o.png" /></view>
+    <view class="item"><image src="../../images/mat-o.png" /></view>
   </view>
   <view class="lists">
-    <view class="floor">2 floor</view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
-    <view class="item"><image src="../../images/mat-c.png"></image></view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
-    <view class="item"><image src="../../images/mat-o.png"></image></view>
+    <view class="floor checked">02楼</view>
+    <view class="item"><image src="../../images/mat-o.png" /></view>
+    <view class="item"><image src="../../images/mat-c.png" /></view>
+    <view class="item"><image src="../../images/mat-o.png" /></view>
+    <view class="item"><image src="../../images/mat-o.png" /></view>
   </view>
   <view class="lists">
-    <view class="floor">3 floor</view>
+    <view class="floor">03楼</view>
     <view class="item"><image src="../../images/du-c.png"></image></view>
     <view class="item"><image src="../../images/du-o.png"></image></view>
     <view class="item"><image src="../../images/du-o.png"></image></view>

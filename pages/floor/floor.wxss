@@ -13,10 +13,20 @@ page{
 .lists{
   display: flex;
 }
-.lists>view{
+.lists>view .item{
   flex: 1;
 }
 .lists .item image{
   width: 150rpx;
   height: 150rpx;
+}
+.lists .floor{
+  color: #fff;
+  align-content: center;
+  margin: auto 30rpx;
+  padding: 10rpx 0;
+}
+.lists .floor.checked{
+  border-top: 2rpx solid #FF9676;
+  border-bottom: 2rpx solid #FF9676;
 }

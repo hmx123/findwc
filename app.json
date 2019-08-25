@@ -9,5 +9,6 @@
     "navigationBarBackgroundColor": "#55AAAD",
     "navigationBarTitleText": "找位",
     "navigationBarTextStyle": "white"
-  }
+  },
+  "sitemapLocation": "sitemap.json"
 }
