@@ -16,9 +16,25 @@ page{
 .lists>view .item{
   flex: 1;
 }
+.lists .item{
+  position: relative;
+}
 .lists .item image{
   width: 150rpx;
   height: 150rpx;
+}
+.item .timetshow{
+  position: absolute;
+  top: 125rpx;
+  left: 10rpx;
+  width: 130rpx;
+  text-align: center;
+  font-size: 20rpx;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.3) 
+}
+.item .timethidden{
+  display: none;
 }
 .lists .floor{
   color: #fff;

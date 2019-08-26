@@ -14,15 +14,8 @@ Page({
       success: function (res) {
         //如果设置直接跳转到floor
         wx.redirectTo({
-          url: '../floor/floor',
+          url: '../floor/floor?gender=' + res.data,
         })
-      },
-      fail: function () {
-        wx.setStorage({
-          key: 'gender',
-          data: 'boy',
-        }),
-        console.log("设置缓存成功");
       }
     })     
   },
@@ -35,8 +28,20 @@ Page({
       var girlselected = true;
       var boyselected = false;
     }
+    //设置缓存
+    wx.setStorage({
+      key: 'gender',
+      data: gender,
+    }),
     this.setData({
       girlselected: girlselected, boyselected: boyselected
     })
+  },
+  skipHandle: function(e) {
+    if (this.data.girlselected||this.data.boyselected) {
+      wx.redirectTo({
+        url: '../floor/floor',
+      })
+    }
   }
 })

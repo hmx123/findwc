@@ -54,10 +54,13 @@ page{
   border-radius: 150rpx;
   color: #ffffff;
   font-size: 32rpx;
-  background: #FF9676;
+  background: #eee;
   padding: 12rpx 30rpx 12rpx 30rpx;
   text-decoration: none;
   letter-spacing:8rpx;
+}
+.button.checked{
+  background: #FF9676;
 }
 navigator{
   border-radius: 150rpx;

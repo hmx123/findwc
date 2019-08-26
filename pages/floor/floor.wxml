@@ -1,25 +1,10 @@
 <!--pages/floor/floor.wxml-->
 <view class="container">
-  <view class="lists">
-    <view class="floor checked">01楼</view>
-    <view class="item"><image src="../../images/mat-o.png" /></view>
-    <view class="item"><image src="../../images/mat-o.png" /></view>
-    <view class="item"><image src="../../images/mat-o.png" /></view>
-    <view class="item"><image src="../../images/mat-o.png" /></view>
+  <view class="lists" wx:for="{{items}}" wx:key="{{index}}">
+    <view class="floor">{{item.floor}}楼</view>
+    <view class="item" wx:for="{{item.seats}}" wx:for-item="seat">
+      <view class="{{seat.human? 'timetshow':'timethidden'}}">{{seat.timet}}</view>
+      <image src="../../images/{{seat.type? 'mat': 'du'}}-{{seat.human? 'c': 'o'}}.png" />
+    </view>
   </view>
-  <view class="lists">
-    <view class="floor checked">02楼</view>
-    <view class="item"><image src="../../images/mat-o.png" /></view>
-    <view class="item"><image src="../../images/mat-c.png" /></view>
-    <view class="item"><image src="../../images/mat-o.png" /></view>
-    <view class="item"><image src="../../images/mat-o.png" /></view>
-  </view>
-  <view class="lists">
-    <view class="floor">03楼</view>
-    <view class="item"><image src="../../images/du-c.png"></image></view>
-    <view class="item"><image src="../../images/du-o.png"></image></view>
-    <view class="item"><image src="../../images/du-o.png"></image></view>
-    <view class="item"><image src="../../images/du-o.png"></image></view>
-  </view>
-
 </view>

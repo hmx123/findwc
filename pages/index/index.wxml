@@ -14,8 +14,6 @@
     </view>
   </view>
   <view>
-    <navigator url="../floor/floor">
-      <button class="button" >确定</button>
-    </navigator>
+      <button hover-class="button-hove" class="button {{girlselected||boyselected? ' checked': ''}}" bindtap="skipHandle" >确定</button>
   </view>
 </view>
