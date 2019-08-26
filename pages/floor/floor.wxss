@@ -46,3 +46,17 @@ page{
   border-top: 2rpx solid #FF9676;
   border-bottom: 2rpx solid #FF9676;
 }
+.footer{
+  position: fixed;
+  width: 300rpx;
+  bottom: 30rpx;
+  /* left: 50rpx; */
+  color: #EBE2E3;
+  left:50%;  /* left 父盒子宽度的一半 */
+  margin-left: -130rpx;
+}
+.footer text:nth-child(1){
+  margin-right: 10rpx; 
+  padding-right: 10rpx;
+  border-right: 1rpx solid #EBE2E3;
+}

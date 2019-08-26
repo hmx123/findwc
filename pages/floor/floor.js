@@ -152,5 +152,25 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  //性别重选
+  genderSelect: function () {
+    wx.removeStorage({
+      key: 'gender',
+      success: function(res) {
+        wx.redirectTo({
+          url: '../index/index',
+        })
+      },
+    })
+  },
+  //小程序分享
+  onShareAppMessage: function () {
+    window.onShareAppMessage = function (data) {
+      return {
+        title: 'test title',
+        path: '/home/index', // 这里的 path 是页面 url，而不是小程序路由
+      }
+    }
   }
 })
