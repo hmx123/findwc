@@ -9,6 +9,6 @@
   </view>
   <view class="footer">
     <text bindtap="genderSelect">性别重选</text>
-    <text bindtap="onShareAppMessage">推荐好友</text>
+    <button open-type="share">推荐好友</button>
   </view>
 </view>

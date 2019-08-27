@@ -56,7 +56,22 @@ page{
   margin-left: -130rpx;
 }
 .footer text:nth-child(1){
+  font-size: 30rpx;
   margin-right: 10rpx; 
   padding-right: 10rpx;
   border-right: 1rpx solid #EBE2E3;
+}
+.footer button{
+  font-size: 30rpx;
+  color: #EBE2E3;
+  background-color: #55AAAD;
+  border: none;
+  padding: 0;
+  margin: 0;
+  line-height: 1;
+  display: inline;
+
+}
+.footer button::after {
+  border: none;
 }

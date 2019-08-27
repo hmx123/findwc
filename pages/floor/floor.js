@@ -110,11 +110,42 @@ Page({
         timer = null;
       },
     })
-    var timer = setInterval(timeAddHandle, 1000,that);
+    var timer = setInterval(timeAddHandle, 1000, that);
     //将timer设置到缓存中 防止多次计时
     wx.setStorage({
       key: 'timeID',
       data: timer,
+    })
+
+    //设置定时刷新任务 刷新坑位状态
+    function requestTiem(that){
+      // wx.request({
+      //   url: 'https://findwc.cn?gender=' + this.data.gender,
+      //   success: function(res) {
+      //     console.log("请求数据成功");
+      //   },
+      //   fail: function(){
+      //     console.log("请求数据失败");
+      //   }
+      // }),
+      // this.setData({
+      //   gender:options.gender
+      // })
+    }
+    
+    //从缓存中获取是否有请求时间id
+    wx.getStorage({
+      key: 'requID',
+      success: function(res) {
+        clearInterval(res.data)
+        requtimer = null;
+      },
+    })
+    var requtimer = setInterval(requestTiem, 20000, that);
+    //将timer设置到缓存中 防止多次计时
+    wx.setStorage({
+      key: 'requID',
+      data: requtimer,
     })
   },
 
@@ -136,6 +167,18 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    // wx.request({
+    //   url: 'https://findwc.cn?gender=' + options.gender,
+    //   success: function(res) {
+    //     console.log("请求数据成功");
+    //   },
+    //   fail: function(){
+    //     console.log("请求数据失败");
+    //   }
+    // }),
+    // this.setData({
+    //   gender:options.gender
+    // })
     //当逻辑执行完后关闭刷新    
     wx.stopPullDownRefresh()
   },
@@ -164,13 +207,5 @@ Page({
       },
     })
   },
-  //小程序分享
-  onShareAppMessage: function () {
-    window.onShareAppMessage = function (data) {
-      return {
-        title: 'test title',
-        path: '/home/index', // 这里的 path 是页面 url，而不是小程序路由
-      }
-    }
-  }
+ 
 })
