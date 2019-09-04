@@ -7,44 +7,24 @@ Page({
    */
   data: {
     gender:'',
-    items: [
-      {
-        "floor": "01",
-         "seats": [
-           { "type": 1, "human": 1, "timet": "00:59:00" }, { "type": 1, "human": 0 }, { "type": 1, "human": 0 }, { "type": 1, "human": 1, "timet": "00:01:54" }
-           ]
-      },
-      {
-        "floor": "02",
-        "seats": [
-          { "type": 1, "human": 0 }, { "type": 1, "human": 0 }, { "type": 1, "human": 0 }, { "type": 1, "human": 1, "timet": "00:14:32"}
-        ]
-      },
-      {
-        "floor": "03",
-        "seats": [
-          { "type": 0, "human": 1, "timet": "00:10:40"}, { "type": 0, "human": 0 }, { "type": 0, "human": 0 }
-        ]
-      },
-    ]
+    items: []
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    // wx.request({
-    //   url: 'https://findwc.cn?gender=' + options.gender,
-    //   success: function(res) {
-    //     console.log("请求数据成功");
-    //   },
-    //   fail: function(){
-    //     console.log("请求数据失败");
-    //   }
-    // }),
-    // this.setData({
-    //   gender:options.gender
-    // })
+    wx.request({
+      url: 'https://findwc.cn/front?gender=' + options.gender,
+      success: function(res) {
+        this.setData({
+          gender: options.gender,
+          items: res
+        })
+      },
+      fail: function(){
+      }
+    })
   },
   /**
    * 生命周期函数--监听页面初次渲染完成
@@ -119,18 +99,19 @@ Page({
 
     //设置定时刷新任务 刷新坑位状态
     function requestTiem(that){
-      // wx.request({
-      //   url: 'https://findwc.cn?gender=' + this.data.gender,
-      //   success: function(res) {
-      //     console.log("请求数据成功");
-      //   },
-      //   fail: function(){
-      //     console.log("请求数据失败");
-      //   }
-      // }),
-      // this.setData({
-      //   gender:options.gender
-      // })
+      wx.request({
+        url: 'https://findwc.cn/front?gender=' + this.data.gender,
+        success: function(res) {
+          this.setData({
+            gender: options.gender,
+            items: res
+          })
+        },
+        fail: function(){
+          console.log("请求数据失败");
+        }
+      })
+      
     }
     
     //从缓存中获取是否有请求时间id
@@ -167,18 +148,19 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
-    // wx.request({
-    //   url: 'https://findwc.cn?gender=' + options.gender,
-    //   success: function(res) {
-    //     console.log("请求数据成功");
-    //   },
-    //   fail: function(){
-    //     console.log("请求数据失败");
-    //   }
-    // }),
-    // this.setData({
-    //   gender:options.gender
-    // })
+    wx.request({
+      url: 'https://findwc.cn?gender=' + options.gender,
+      success: function(res) {
+        this.setData({
+          gender: options.gender,
+          items: res
+        })
+      },
+      fail: function(){
+        console.log("请求数据失败");
+      }
+    }),
+    
     //当逻辑执行完后关闭刷新    
     wx.stopPullDownRefresh()
   },
