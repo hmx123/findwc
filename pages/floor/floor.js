@@ -14,12 +14,13 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
+    var that = this;
     wx.request({
       url: 'https://findwc.cn/front?gender=' + options.gender,
       success: function(res) {
-        this.setData({
+        that.setData({
           gender: options.gender,
-          items: res
+          items: res.data
         })
       },
       fail: function(){
@@ -100,11 +101,11 @@ Page({
     //设置定时刷新任务 刷新坑位状态
     function requestTiem(that){
       wx.request({
-        url: 'https://findwc.cn/front?gender=' + this.data.gender,
+        url: 'https://findwc.cn/front?gender=' + that.data.gender,
         success: function(res) {
-          this.setData({
-            gender: options.gender,
-            items: res
+          that.setData({
+            gender: that.data.gender,
+            items: res.data
           })
         },
         fail: function(){
@@ -122,7 +123,7 @@ Page({
         requtimer = null;
       },
     })
-    var requtimer = setInterval(requestTiem, 20000, that);
+    var requtimer = setInterval(requestTiem, 10000, that);
     //将timer设置到缓存中 防止多次计时
     wx.setStorage({
       key: 'requID',
@@ -148,12 +149,13 @@ Page({
    * 页面相关事件处理函数--监听用户下拉动作
    */
   onPullDownRefresh: function () {
+    var that = this;
     wx.request({
-      url: 'https://findwc.cn?gender=' + options.gender,
+      url: 'https://findwc.cn/front?gender=' + that.data.gender,
       success: function(res) {
-        this.setData({
-          gender: options.gender,
-          items: res
+        that.setData({
+          gender: that.data.gender,
+          items: res.data
         })
       },
       fail: function(){

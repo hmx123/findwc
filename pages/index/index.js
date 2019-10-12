@@ -39,8 +39,14 @@ Page({
   },
   skipHandle: function(e) {
     if (this.data.girlselected||this.data.boyselected) {
+      var gender = '';
+      if (this.data.girlselected){
+        gender = 'girl';
+      }else{
+        gender = 'boy';
+      }
       wx.redirectTo({
-        url: '../floor/floor',
+        url: '../floor/floor?gender=' + gender,
       })
     }
   }
