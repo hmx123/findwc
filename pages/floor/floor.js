@@ -100,6 +100,7 @@ Page({
 
     //设置定时刷新任务 刷新坑位状态
     function requestTiem(that){
+      console.log('我在自动更新')
       wx.request({
         url: 'https://findwc.cn/front?gender=' + that.data.gender,
         success: function(res) {
@@ -124,6 +125,7 @@ Page({
       },
     })
     var requtimer = setInterval(requestTiem, 10000, that);
+    console.log(requtimer)
     //将timer设置到缓存中 防止多次计时
     wx.setStorage({
       key: 'requID',
